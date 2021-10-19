@@ -3,7 +3,6 @@
 #define IME 100
 #define MAX_LINE 1024
 
-
 typedef struct                                                              
 {
   int ocjene;
@@ -11,13 +10,9 @@ typedef struct
   char prezime[IME];
 }Student;
 
-
-
 int procitajDatoteku(char *imeDatoteke);                                    
 Student* alocirajIProcitajIzDatoteke(char* imeDatoteke, int brojStudenata); 
 int maxBodovi(Student *studenti,int brojStudenata);                             
-
-
 
 int main()                                                                 
 {
@@ -39,8 +34,6 @@ int main()
     return 0;
 }
 
-
-
 int procitajDatoteku(char *imeDatoteke)                                     
 {
     int br=0;
@@ -53,7 +46,6 @@ int procitajDatoteku(char *imeDatoteke)
         printf("Neuspjesno otvaranje datoteke.\n");
         return -1;
     }
-   
     while(!feof(fp))
     {
         fgets(buffer,MAX_LINE,fp);
@@ -62,8 +54,6 @@ int procitajDatoteku(char *imeDatoteke)
     fclose(fp);
     return br;
 }
-
-
 
 Student *alocirajIProcitajIzDatoteke(char *imeDatoteke,int brojStudenata)   
 {
@@ -90,8 +80,6 @@ Student *alocirajIProcitajIzDatoteke(char *imeDatoteke,int brojStudenata)
     fclose(fp);
     return studenti;
 }
-
-
 
 int maxBodovi(Student *studenti,int brojStudenata)                              
 {
